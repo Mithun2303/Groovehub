@@ -1,0 +1,249 @@
+[
+  {
+    "title": "Lavender Haze",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:22",
+    "language": "English",
+    "link": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/01.%20Lavender%20Haze.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Maroon",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:38",
+    "language": "English",
+    "link": "https://ia902705.us.archive.org/5/items/01.-lavender-haze/02.%20Maroon.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Anti-Hero",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:20",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/03.%20Anti-Hero.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Snow On The Beach (Ft. Lana Del Rey)",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "4:16",
+    "language": "English",
+    "link": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/04.%20Snow%20On%20The%20Beach.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "You're On Your Own, Kid",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:14",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/05.%20You're%20On%20Your%20Own%2C%20Kid.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Midnight Rain",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "2:54",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/06.%20Midnight%20Rain.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Question...?",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:30",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/07.%20Question..._.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Vigilante Shit",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "2:44",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/08.%20Vigilante%20Shit.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Bejeweled",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:14",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/09.%20Bejeweled.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Labyrinth",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "4:07",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/10.%20Labyrinth.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Karma",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:24",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/11.%20Karma.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Sweet Nothing",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:08",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/12.%20Sweet%20Nothing.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  },
+  {
+    "title": "Mastermind",
+    "artists": [
+      {
+        "name": "Taylor Swift",
+        "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2fts.jpeg?alt=media&token=bdf80242-338d-45b3-bc8c-52c7f5e01e15"
+      }
+    ],
+    "album": {
+      "name": "Midnights",
+      "cover": "https://ia802705.us.archive.org/5/items/01.-lavender-haze/cover%20%281%29.jpg?cnt=0"
+    },
+    "lyrics": "Taylor Swift",
+    "duration": "3:11",
+    "language": "English",
+    "link": "https://dn720300.ca.archive.org/0/items/01.-lavender-haze/13.%20Mastermind.mp3",
+    "plays": 0,
+    "genre": ["Pop", "Synthpop"]
+  }
+]

@@ -1,0 +1,61 @@
+###
+
+GET http://localhost:8000/api/popular_artist
+
+###
+
+GET http://localhost:8000/api/artist/Taylor%20Swift
+
+###
+
+GET http://localhost:8000/api/album/Mahaan
+
+###
+
+GET http://localhost:8000/api/auth/checkusername/mithun
+
+###
+GET http://127.0.0.1:8000/api/user/likedsongs
+
+###
+GET http://127.0.0.1:8000/api/user/song
+Content-Type: application/json
+
+{
+    "likedSongs":[
+  "6639fbd0a4128ec8b95f00a7",
+  "6639fbd0a4128ec8b95f00a8",
+  "6639fbd0a4128ec8b95f00a9",
+  "6639fbd0a4128ec8b95f00aa",
+  "6639fbd0a4128ec8b95f00b1",
+  "663a25f0a4128ec8b95f00ba"
+    ]
+}
+
+###
+POST http://localhost:8000/api/auth/login/
+Content-Type: application/json
+
+{
+    "username":"johndoe",
+    "password":"johndoe"
+}
+
+###
+
+POST http://localhost:8000/api/auth/register/
+Content-Type: application/json
+
+{
+    "email":"johndoe@john.com",
+    "username":"johndoe",
+    "password":"johndoe"
+}
+
+### 
+POST http://127.0.0.1:8000/api/user/like
+Content-Type: application/json
+
+{
+    "title":"Lavendar Haze"
+}

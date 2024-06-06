@@ -1,0 +1,167 @@
+[
+    {
+        "title": "Soorayaatam",
+        "artists": [
+          {
+            "name": "Santhosh Narayanan",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FSN.jpg?alt=media&token=464f46ea-b1e9-46a7-8ac7-f9ecc00d14ad"
+          },
+          {
+            "name": "V.M. Mahalingam",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FV%20M%20Mahalingam.jpg?alt=media&token=8aacc78b-8d08-47af-a15c-3eabb99d58aa"
+          },
+          {
+            "name": "Muthamil",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FMuthamil.jpg?alt=media&token=35da6358-948d-4184-8c10-0e9d589232ba"
+          }
+        ],
+        "album": {
+          "name": "Mahaan",
+          "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FMahaan.jpg?alt=media&token=97842fe1-0e0a-40e3-9576-d0f84c17f15a"
+        },
+        "lyrics": "Muthamil",
+        "duration": "4:41",
+        "language": "Tamil",
+        "link": "https://ia903405.us.archive.org/5/items/soorayaatam-mass-tamilan.fm/Soorayaatam-MassTamilan.fm.mp3",
+        "plays": 0,
+        "genre": ["Indian Film Pop", "Indian Hip-Hop"]
+      },
+      {
+        "title": "Pona Povura",
+        "artists": [
+          {
+            "name": "Santhosh Narayanan",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FSN.jpg?alt=media&token=464f46ea-b1e9-46a7-8ac7-f9ecc00d14ad"
+          },
+          {
+            "name": "Gana Muthu",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FGana%20muthu.jpg?alt=media&token=6829afc8-d882-4981-bafa-cf9218511a82"
+          },
+          {
+            "name": "Asal Kolaar",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FAsal%20Kolaar.jpg?alt=media&token=002a72ac-7a58-40fe-8465-13b25fb271d4"
+          }
+        ],
+        "album": {
+          "name": "Mahaan",
+          "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FMahaan.jpg?alt=media&token=97842fe1-0e0a-40e3-9576-d0f84c17f15a"
+        },
+        "lyrics": "Asal Kolaar",
+        "duration": "3:23",
+        "language": "Tamil",
+        "link": "https://ia903405.us.archive.org/5/items/soorayaatam-mass-tamilan.fm/Pona-Povura-MassTamilan.fm.mp3",
+        "plays": 0,
+        "genre": ["Indian Film Pop", "Indian Hip-Hop"]
+      },
+      {
+        "title": "Rich Rich",
+        "artists": [
+          {
+            "name": "Santhosh Narayanan",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FSN.jpg?alt=media&token=464f46ea-b1e9-46a7-8ac7-f9ecc00d14ad"
+          },
+          {
+            "name": "Durai",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2Ficons8-user-100.png?alt=media&token=18444789-9525-44c4-9c81-1b1cf53e147b"
+          },
+          {
+            "name": "ofRO",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FofRO.jpg?alt=media&token=15ef8631-5d43-46fa-81f5-da262750dccf"
+          }
+        ],
+        "album": {
+          "name": "Mahaan",
+          "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FMahaan.jpg?alt=media&token=97842fe1-0e0a-40e3-9576-d0f84c17f15a"
+        },
+        "lyrics": "Durai",
+        "duration": "3:05",
+        "language": "Tamil",
+        "link": "https://ia903405.us.archive.org/5/items/soorayaatam-mass-tamilan.fm/Rich-Rich-MassTamilan.fm.mp3",
+        "plays": 0,
+        "genre": ["Indian Film Pop", "Indian Hip-Hop"]
+      },
+      {
+        "title": "Evanda Enakku Custody",
+        "artists": [
+          {
+            "name": "Santhosh Narayanan",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FSN.jpg?alt=media&token=464f46ea-b1e9-46a7-8ac7-f9ecc00d14ad"
+          }
+        ],
+        "album": {
+          "name": "Mahaan",
+          "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FMahaan.jpg?alt=media&token=97842fe1-0e0a-40e3-9576-d0f84c17f15a"
+        },
+        "lyrics": "Vivek",
+        "duration": "3:32",
+        "language": "Tamil",
+        "link": "https://ia903405.us.archive.org/5/items/soorayaatam-mass-tamilan.fm/Evanda-Enakku-Custody-MassTamilan.fm.mp3",
+        "plays": 0,
+        "genre": ["Indian Film Pop", "Indian Hip-Hop"]
+      },
+      {
+        "title": "Missing Me",
+        "artists": [
+          {
+            "name": "Santhosh Narayanan",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FSN.jpg?alt=media&token=464f46ea-b1e9-46a7-8ac7-f9ecc00d14ad"
+          },
+          {
+            "name": "Dhruv Vikram",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2Fdhruv.jpg?alt=media&token=5040555d-eb3b-46e6-a06b-49ca92a277ab"
+          }
+        ],
+        "album": {
+          "name": "Mahaan",
+          "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FMahaan.jpg?alt=media&token=97842fe1-0e0a-40e3-9576-d0f84c17f15a"
+        },
+        "lyrics": "Vivek",
+        "duration": "3:01",
+        "language": "Tamil",
+        "link": "https://ia903405.us.archive.org/5/items/soorayaatam-mass-tamilan.fm/Missing-Me-MassTamilan.fm.mp3",
+        "plays": 0,
+        "genre": ["Indian Film Pop", "Indian Hip-Hop"]
+      },
+      {
+        "title": "Naan Naan",
+        "artists": [
+          {
+            "name": "Santhosh Narayanan",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FSN.jpg?alt=media&token=464f46ea-b1e9-46a7-8ac7-f9ecc00d14ad"
+          }
+        ],
+        "album": {
+          "name": "Mahaan",
+          "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FMahaan.jpg?alt=media&token=97842fe1-0e0a-40e3-9576-d0f84c17f15a"
+        },
+        "lyrics": "Vivek",
+        "duration": "4:08",
+        "language": "Tamil",
+        "link": "https://ia903405.us.archive.org/5/items/soorayaatam-mass-tamilan.fm/Naan-Naan-MassTamilan.fm.mp3",
+        "plays": 0,
+        "genre": ["Indian Film Pop", "Indian Hip-Hop"]
+      },
+      {
+        "title": "Umm Song - Tamil",
+        "artists": [
+          {
+            "name": "Santhosh Narayanan",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FSN.jpg?alt=media&token=464f46ea-b1e9-46a7-8ac7-f9ecc00d14ad"
+          },
+          {
+            "name": "Aditya Ravindran",
+            "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FAditya%20Ravinder.jpg?alt=media&token=30819e43-52f2-465e-8857-55a4395d649b"
+          }
+        ],
+        "album": {
+          "name": "Mahaan",
+          "cover": "https://firebasestorage.googleapis.com/v0/b/groovehub-c074d.appspot.com/o/images%2FMahaan.jpg?alt=media&token=97842fe1-0e0a-40e3-9576-d0f84c17f15a"
+        },
+        "lyrics": "Vivek",
+        "duration": "2:55",
+        "language": "Tamil",
+        "link": "https://ia903405.us.archive.org/5/items/soorayaatam-mass-tamilan.fm/Umm-Song-MassTamilan.fm.mp3",
+        "plays": 0,
+        "genre": ["Indian Film Pop", "Indian Hip-Hop"]
+      }
+]
