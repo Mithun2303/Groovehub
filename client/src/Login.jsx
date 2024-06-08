@@ -96,7 +96,7 @@ export const Login = ({ handleLogin }) => {
                 if (res.status == 200) {
                     localStorage.setItem("username",username);
                     localStorage.setItem("dp",res.data.dp);
-
+                    handleLogin();
                     console.log(res);
                     navigate("/");
                 }
@@ -105,7 +105,7 @@ export const Login = ({ handleLogin }) => {
                 }
             })
             .catch((err) => {
-                console.log(err.response);
+                console.log(err);
                 seterrrormessage(err.response.data.message);
                 setpwdcrct(false);
                 console.log("hello")

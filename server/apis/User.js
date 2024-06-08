@@ -152,15 +152,20 @@ router.post("/unlike", async (req, res) => {
 
 router.get("/likedsongs", async (req, res) => {
     // console.log(req.body);
-    const { cookie } = await parseCookies(req.headers.cookie);
-    // console.log(cookie);
-    const { username } = await verify_token(cookie);
-    psql.query("select song_id from user_likes_dimension where username=$1",
+    try {
+        
+        const { cookie } = await parseCookies(req.headers.cookie);
+        // console.log(cookie);
+        const { username } = await verify_token(cookie);
+        psql.query("select song_id from user_likes_dimension where username=$1",
         [username],
         (err, result) => {
             if (err) console.log(err);
             // console.log(result);
             res.json({ ids: result.rows })
         })
+    } catch (error) {
+        res.json(error)
+    }
 })
 module.exports = router;
