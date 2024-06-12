@@ -33,7 +33,6 @@ export const Sidebar = ({ activeComponent, setActiveComponent, showHome, isLogge
                 <button className="" onClick={(e) => {
                     if (isLoggedIn) {
                         setActiveComponent(1)
-                        createSpace()
                     }
                     else {
                         alert("Please login/signup to view activity")
@@ -50,7 +49,8 @@ export const Sidebar = ({ activeComponent, setActiveComponent, showHome, isLogge
                 </button>
                 <button className="" onClick={(e) => {
                     if (isLoggedIn) {
-                        createSpace()
+                        createSpace();
+                        console.log("CREATING SPACE")
                     }
                     else {
                         alert("Please login/signup to create space")

@@ -39,8 +39,8 @@ function LoadPicture({ obj,setObj,register }) {
         const downloadURL = await getDownloadURL(imageRef);
         console.log(downloadURL);
         let robj = obj;
-        robj.profilepic = downloadURL;
-        setObj(robj);
+        robj.displaypic = downloadURL;
+        await setObj(robj);
         // console.log(obj);
         register();
       } catch (error) {

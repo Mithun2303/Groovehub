@@ -18,7 +18,7 @@ export const Dashboard = ({ cookies,
     queue,
     addQueue,
     playNow,
-    shufflePlay
+    shufflePlay,
 }) => {
 
     const [showJoinSpace,setShowJoinSpace] = useState(false);
@@ -58,19 +58,18 @@ export const Dashboard = ({ cookies,
         if (isLoggedIn)
             axios.get("http://127.0.0.1:8000/api/user/recentlyplayed/4", { withCredentials: true })
                 .then((res) => {
+                    console.log(res.data);
                     setRecentlyPlayed(res.data);
                     setShowRecentlyPlayed(true);
                 })
-    }, [isLoggedIn])
-    useEffect(() => {
-        if (isLoggedIn && currentSong != null) {
-            console.log(currentSong);
-            axios.post("http://127.0.0.1:8000/api/user/listen", { song: currentSong }, { withCredentials: true })
-                .then((res) => {
-                    // console.log(res);
-                })
-        }
-    }, [currentSong])
+    }, [isLoggedIn]);
+
+    // useEffect(() => {
+    //     if (isLoggedIn && queue.length!=0) {
+    //         console.log('queuePointer');
+            
+    //     }
+    // }, [queuePointer,queue])
 
 
     return (
@@ -154,6 +153,7 @@ export const Dashboard = ({ cookies,
                     onPrevious={onPrevious}
                     addQueue={addQueue}
                     playNow={playNow}
+
                 />
             }
             <Sidebar2 setCurrentSong={setCurrentSong}

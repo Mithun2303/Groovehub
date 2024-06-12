@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-export const RecentlyPlayed = ({ props, addQueue,playNow }) => {
+export const RecentlyPlayed = ({ props, addQueue, playNow }) => {
     useEffect(() => {
         console.log(props[0].album.cover);
     }, [])
@@ -39,7 +39,7 @@ export const RecentlyPlayed = ({ props, addQueue,playNow }) => {
                         </button>
                     </div>
                 </div>
-                <div className="flex flex-col gap-4">
+                {props.length > 3 ? <div className="flex flex-col gap-4">
 
                     <div className="flex h-[80px] w-fit bg-black rounded-l-[80px] rounded-r-[50px] gap-4">
                         <div>
@@ -170,19 +170,19 @@ export const RecentlyPlayed = ({ props, addQueue,playNow }) => {
                         </div>
                         <div className="flex items-center p-3">
                             <button onClick={(e) => { e.preventDefault(); playNow(props[2]) }}>
-                            <svg width="50" height="50" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 0.166656C9.49999 0.166656 0.166656 9.49999 0.166656 21C0.166656 32.5 9.49999 41.8333 21 41.8333C32.5 41.8333 41.8333 32.5 41.8333 21C41.8333 9.49999 32.5 0.166656 21 0.166656ZM16.8333 28.2917V13.7083C16.8333 13.5149 16.8872 13.3252 16.9889 13.1607C17.0906 12.9961 17.2361 12.8631 17.4091 12.7766C17.5822 12.6901 17.7759 12.6535 17.9685 12.6709C18.1612 12.6882 18.3452 12.7589 18.5 12.875L28.2292 20.1667C28.7917 20.5833 28.7917 21.4167 28.2292 21.8333L18.5 29.125C18.3452 29.2411 18.1612 29.3117 17.9685 29.3291C17.7759 29.3465 17.5822 29.3099 17.4091 29.2234C17.2361 29.1368 17.0906 29.0039 16.9889 28.8393C16.8872 28.6747 16.8333 28.4851 16.8333 28.2917Z" fill="url(#paint0_linear_2_414)" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_2_414" x1="21" y1="0.166656" x2="21" y2="41.8333" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#76ABAE" />
-                                        <stop offset="1" stop-color="#76ABAE" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+                                <svg width="50" height="50" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 0.166656C9.49999 0.166656 0.166656 9.49999 0.166656 21C0.166656 32.5 9.49999 41.8333 21 41.8333C32.5 41.8333 41.8333 32.5 41.8333 21C41.8333 9.49999 32.5 0.166656 21 0.166656ZM16.8333 28.2917V13.7083C16.8333 13.5149 16.8872 13.3252 16.9889 13.1607C17.0906 12.9961 17.2361 12.8631 17.4091 12.7766C17.5822 12.6901 17.7759 12.6535 17.9685 12.6709C18.1612 12.6882 18.3452 12.7589 18.5 12.875L28.2292 20.1667C28.7917 20.5833 28.7917 21.4167 28.2292 21.8333L18.5 29.125C18.3452 29.2411 18.1612 29.3117 17.9685 29.3291C17.7759 29.3465 17.5822 29.3099 17.4091 29.2234C17.2361 29.1368 17.0906 29.0039 16.9889 28.8393C16.8872 28.6747 16.8333 28.4851 16.8333 28.2917Z" fill="url(#paint0_linear_2_414)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2_414" x1="21" y1="0.166656" x2="21" y2="41.8333" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#76ABAE" />
+                                            <stop offset="1" stop-color="#76ABAE" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> : null}
 
             </div>
         </section>

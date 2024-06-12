@@ -6,24 +6,31 @@ import { CookiesProvider, useCookies } from 'react-cookie'
 import { Login } from './Login';
 import Cookies from 'js-cookie';
 import { Space } from './Space';
-
+import axios from 'axios';
 
 function App() {
-  const [cookies, setCookie, removeCookie] = useCookies()
-  function handleLogin() {
+  const [cookies, setCookie, removeCookie] = useCookies(["username"])
+  function handleLogin(user) {
     setIsLoggedIn(true);
+    setCookie('username', user, { path: '/' })
   }
-  
+
+  // useEffect(() => {
+  //   window.addEventListener('load', handleLogin);
+  //   return () => {
+  //     window.removeEventListener('load', handleLogin);
+  //   };
+  // }, []);
   useEffect(() => {
-    window.addEventListener('load', handleLogin);
-    return () => {
-      window.removeEventListener('load', handleLogin);
-    };
+    if (cookies.username) {
+      setIsLoggedIn(true);
+    }
   }, []);
+
   function handleLogout() {
     setIsLoggedIn(false);
     localStorage.clear();
-    removeCookie();
+    removeCookie("username");
   }
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [queue, setQueue] = useState([]);
@@ -35,6 +42,7 @@ function App() {
     }
     else {
       setQueuePointer(queuePointer + 1);
+      listen(queue[queuePointer])
     }
   }
   const onPrevious = () => {
@@ -43,6 +51,8 @@ function App() {
     }
     else {
       setQueuePointer(queuePointer - 1);
+      listen(queue[queuePointer])
+
     }
   }
   const addQueue = (props) => {
@@ -50,8 +60,17 @@ function App() {
   }
   const playNow = (props) => {
     setQueue((prev) => [props]);
+    listen(props);
     setQueuePointer(0);
     console.log(queue, queuePointer);
+  }
+  const listen = (song) => {
+    if (isLoggedIn) {
+      axios.post("http://127.0.0.1:8000/api/user/listen", { song: song }, { withCredentials: true })
+        .then((res) => {
+          console.log(res);
+        })
+    }
   }
   const shufflePlay = () => {
 
@@ -60,27 +79,31 @@ function App() {
 
   }
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path='/'
-          element={<Dashboard
-            cookies={cookies}
-            isLoggedIn={isLoggedIn}
-            handleLogout={handleLogout}
-            onNext={onNext}
-            onPrevious={onPrevious}
-            queuePointer={queuePointer}
-            queue={queue}
-            addQueue={addQueue}
-            playNow={playNow}
-            shufflePlay={shufflePlay}
-          />} />
-        <Route path="/login" element={<Login handleLogin={handleLogin} />} />
-        <Route path='/space/:space_id' element={<Space />} />
-        <Route path='/1' element={<Sample />} />
-      </Routes>
-    </BrowserRouter>
+    <CookiesProvider>
+
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/'
+            element={<Dashboard
+              cookies={cookies}
+              isLoggedIn={isLoggedIn}
+              handleLogout={handleLogout}
+              onNext={onNext}
+              onPrevious={onPrevious}
+              queuePointer={queuePointer}
+              queue={queue}
+              addQueue={addQueue}
+              playNow={playNow}
+              shufflePlay={shufflePlay}
+
+            />} />
+          <Route path="/login" element={<Login handleLogin={handleLogin} />} />
+          <Route path='/space/:space_id' element={<Space />} />
+          <Route path='/1' element={<Sample />} />
+        </Routes>
+      </BrowserRouter>
+    </CookiesProvider>
   )
 }
 

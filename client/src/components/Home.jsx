@@ -19,7 +19,7 @@ export const Home = ({ setShowMainPage,
     setShowRecentlyPlayed,
     setRecentlyPlayed,
     addQueue,
-    playNow
+    playNow,
 }) => {
     const [popularArtists, setPopularArtists] = useState([]);
     const [trendyAlbum, setTrendyAlbum] = useState([]);
@@ -102,6 +102,7 @@ export const Home = ({ setShowMainPage,
                     props={recentlyPlayed}
                     addQueue={addQueue}
                     playNow={playNow}
+
                 />}
         </main>
     )

@@ -96,7 +96,7 @@ export const Login = ({ handleLogin }) => {
                 if (res.status == 200) {
                     localStorage.setItem("username",username);
                     localStorage.setItem("dp",res.data.dp);
-                    handleLogin();
+                    handleLogin(username);
                     console.log(res);
                     navigate("/");
                 }

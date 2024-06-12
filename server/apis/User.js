@@ -22,10 +22,10 @@ router.get("/profile/:username",async (req,res)=>{
 router.get("/space/:space_id",async (req,res)=>{
     try {
         const {space_id} = req.params;
-        console.log(space_id)
+        // console.log(space_id)
         const { cookie } = await parseCookies(req.headers.cookie);
         const { username } = await verify_token(cookie);
-        console.log(username);
+        // console.log(username);
         space_exist = await psql.query("select * from user_space_dimension where space_id=$1",[space_id]);
         if(space_exist.rowCount>0){
             const response = await psql.query("insert into user_space_dimension(username,space_id,owner_name) values($1,$2,$3) returning *"
@@ -41,7 +41,7 @@ router.get("/space/:space_id",async (req,res)=>{
         if(error.message=='duplicate key value violates unique constraint "user_space_dimension_pkey"'){
             res.status(200).json({message:"Success"})
         }
-        console.log(error)
+        // console.log(error)
         res.status(404).json({message:error})
         
     }
@@ -52,7 +52,7 @@ router.post("/space",async (req,res)=>{
     // console.log(req.headers); 
     try {
         const { cookie } = await parseCookies(req.headers.cookie);
-        console.log(cookie);
+        // console.log(cookie);
         const { username } = await verify_token(cookie);
         const space_id = Math.random().toString(36).substring(2,8);
         psql.query(`insert into user_space_dimension(username,space_id,owner_name) values($1,$2,$3) returning *`,
@@ -60,7 +60,7 @@ router.post("/space",async (req,res)=>{
         (error,result)=>{
             if(error) throw(error);
             else{
-                console.log(result);
+                // console.log(result);
                 res.status(201).json(result.rows[0]);
             }
         });
@@ -81,14 +81,14 @@ router.post("/listen", async (req, res) => {
         [username, song._id, new Date()],
         (err, result) => {
             if (err) console.log(err);
-            console.log(result);
+            // console.log(result);
 
         })
 })
 
-router.get("/recentlyplayed/:limit", async (req, res) => {
+router.get("/recentlyplayed/:limit", async (req, res) => { 
     const { cookie } = await parseCookies(req.headers.cookie);
-    console.log(12345);
+    // console.log(12345);
     const { username } = await verify_token(cookie);
     let song_ids = [];
     const { limit } = req.params;
@@ -96,11 +96,11 @@ router.get("/recentlyplayed/:limit", async (req, res) => {
         [username, limit],
         async (err, result) => {
             if (err) console.log(err);
-            console.log(result);
+            // console.log(result);
             result.rows.forEach((element)=>{
                 song_ids.push(element.song_id);
             })
-            console.log(song_ids);
+            // console.log(song_ids);
             const response = await Promise.all(song_ids.map(async (element) => {
                 let temp = await SongModel.find({ _id: element });
                 return temp[0];
@@ -115,19 +115,19 @@ router.get("/recentlyplayed/:limit", async (req, res) => {
 })
 router.post("/song", async (req, res) => {
     const { likedSongs } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     const result = await SongModel.find({ _id: { $in: likedSongs } });
-    console.log(result);
+    // console.log(result);
     res.json(result)
 })
 
 router.post("/like", async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const { cookie } = await parseCookies(req.headers.cookie);
     const { song } = req.body;
-    console.log(cookie);
+    // console.log(cookie);
     const { username } = await verify_token(cookie);
-    console.log(song._id);
+    // console.log(song._id);
     psql.query(`insert into user_likes_dimension(username,song_id) values($1,$2) RETURNING *`,
         [username, song._id],
         (error, result) => {
@@ -136,17 +136,17 @@ router.post("/like", async (req, res) => {
         })
 })
 router.post("/unlike", async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const { cookie } = await parseCookies(req.headers.cookie);
     const { song } = req.body;
-    console.log(cookie);
+    // console.log(cookie);
     const { username } = await verify_token(cookie);
-    console.log(song._id);
+    // console.log(song._id);
     psql.query(`delete from user_likes_dimension where username=$1 and song_id=$2`,
         [username, song._id],
         (error, result) => {
             if (error) console.log(error);
-            console.log(result);
+            // console.log(result);
         })
 })
 
