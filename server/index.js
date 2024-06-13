@@ -4,28 +4,27 @@ const cors = require("cors");
 const cookieParser = require('cookie-parser');
 const http = require("http");
 const { Server } = require("socket.io");
-const { getProfile } = require("./crud/Auth");
-
-const Home = require("./apis/Home");
-const Auth = require("./apis/Auth");
-const User = require("./apis/User");
-
 const mongoose = require("mongoose");
+
+
+const {middleware} = require("./middleware/middleware");
+const Home = require("./routes/Songs");
+const Auth = require("./routes/Auth");
+const User = require("./routes/User");
 const SongModel = require("./models/Songs");
 
-//Database
 mongoose.connect("mongodb://localhost:27017/Groovehub")
 
+app.use(middleware)
 app.use(cors({
     origin: ['http://127.0.0.1:3000'],
     credentials: true
 }));
+app.use(cookieParser())
 app.use(express.json())
 app.use("/api", Home)
 app.use("/api/auth", Auth)
 app.use("/api/user", User)
-
-app.use(cookieParser())
 
 const server = http.createServer(app)
 

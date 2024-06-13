@@ -1,13 +1,9 @@
-const router = require("express").Router();
-const { parseCookies } = require("../crud/Auth")
-const mongoose = require("mongoose");
-const UserModel = require("../models/Users");
+const { parseCookies } = require("../controllers/Auth")
 const SongModel = require("../models/Songs");
 const psql = require("../database");
-const { verify_token,getProfile } = require("../crud/Auth");
+const { verify_token,getProfile } = require("../controllers/Auth");
 const { response } = require("express");
-
-router.get("/profile/:username",async (req,res)=>{
+const getProfilePicture = async (req,res)=>{
     try {
         const {username} = req.params;
         const profile = await getProfile(username);
@@ -18,8 +14,9 @@ router.get("/profile/:username",async (req,res)=>{
         res.status(404).jsonp("Not Found");
         
     }
-})
-router.get("/space/:space_id",async (req,res)=>{
+}
+
+const getSpace = async (req,res)=>{
     try {
         const {space_id} = req.params;
         // console.log(space_id)
@@ -45,10 +42,8 @@ router.get("/space/:space_id",async (req,res)=>{
         res.status(404).json({message:error})
         
     }
-})
-
-
-router.post("/space",async (req,res)=>{
+}
+const postSpace = async (req,res)=>{
     // console.log(req.headers); 
     try {
         const { cookie } = await parseCookies(req.headers.cookie);
@@ -67,10 +62,9 @@ router.post("/space",async (req,res)=>{
     } catch (error) {
         
     }
-})
+}
 
-
-router.post("/listen", async (req, res) => {
+const postListen =  async (req, res) => {
     console.log(req.body);
     const { cookie } = await parseCookies(req.headers.cookie);
     const { username } = await verify_token(cookie);
@@ -84,9 +78,8 @@ router.post("/listen", async (req, res) => {
             // console.log(result);
 
         })
-})
-
-router.get("/recentlyplayed/:limit", async (req, res) => { 
+}
+const getRecentlyPlayed =  async (req, res) => { 
     const { cookie } = await parseCookies(req.headers.cookie);
     // console.log(12345);
     const { username } = await verify_token(cookie);
@@ -112,16 +105,9 @@ router.get("/recentlyplayed/:limit", async (req, res) => {
     )
 
 
-})
-router.post("/song", async (req, res) => {
-    const { likedSongs } = req.body;
-    // console.log(req.body);
-    const result = await SongModel.find({ _id: { $in: likedSongs } });
-    // console.log(result);
-    res.json(result)
-})
+}
 
-router.post("/like", async (req, res) => {
+const postLike =  async (req, res) => {
     // console.log(req.body);
     const { cookie } = await parseCookies(req.headers.cookie);
     const { song } = req.body;
@@ -134,8 +120,9 @@ router.post("/like", async (req, res) => {
             if (error) console.log(error);
             res.json({ song: result })
         })
-})
-router.post("/unlike", async (req, res) => {
+}
+
+const postUnlike = async (req, res) => {
     // console.log(req.body);
     const { cookie } = await parseCookies(req.headers.cookie);
     const { song } = req.body;
@@ -148,9 +135,9 @@ router.post("/unlike", async (req, res) => {
             if (error) console.log(error);
             // console.log(result);
         })
-})
+}
 
-router.get("/likedsongs", async (req, res) => {
+const getLikedSongs =  async (req, res) => {
     // console.log(req.body);
     try {
         
@@ -167,5 +154,23 @@ router.get("/likedsongs", async (req, res) => {
     } catch (error) {
         res.json(error)
     }
-})
-module.exports = router;
+}
+
+const postSong = async (req, res) => {
+    const { likedSongs } = req.body;
+    // console.log(req.body);
+    const result = await SongModel.find({ _id: { $in: likedSongs } });
+    // console.log(result);
+    res.json(result)
+}
+module.exports= {
+    getLikedSongs,
+    getProfilePicture,
+    getRecentlyPlayed,
+    getSpace,
+    postLike,
+    postListen,
+    postSpace,
+    postUnlike,
+    postSong
+}

@@ -1,17 +1,58 @@
-const router = require("express").Router();
-const mongoose = require("mongoose");
-const UserModel = require("../models/Users");
-const SongModel = require("../models/Songs");
+const psql = require("../database");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
 const { v4 } = require("uuid");
-const psql = require("../database");
-const { createJWT, verify_token } = require("../crud/Auth");
-
 dotenv.config();
+const bcrypt = require("bcrypt");
 
-router.get("/checkusername/:username", async (req, res) => {
+const parseCookies = (cookie) =>{
+    // console.log(cookie);
+    const cookies = {};
+    const parts = cookie.split('; ');
+    parts.forEach(part => {
+        const [name, value] = part.split('=');
+        cookies[name] = value;
+    });
+    // console.log(cookies);
+    return cookies;
+}
+const retrieveToken = (user_id) => {
+    psql.query("select access_token from user_dimension where user_id=$1", [user_id],
+        (err, response) => {
+            // console.log(response);
+            verify_token(response.rows[0])
+        })
+} 
+const getProfile = async(username) => {
+    const response = await psql.query("select display_picture from user_dimension where username=$1", [username])
+    return response;
+}
+
+const createJWT = (user_id, username, email) =>{
+    const token = jwt.sign(
+        {
+            user_id: user_id,
+            username: username,
+            email: email
+        },
+        process.env.JWT_SECRET,
+        {
+            expiresIn: "100d"
+        }
+    );
+    return token;
+}
+
+const verify_token = (token) => {
+    try {
+        const decoded_token = jwt.verify(token, process.env.JWT_SECRET);
+        return decoded_token
+    } catch (error) {
+        return error.message
+    }
+}
+
+const checkUsername = async (req, res) => {
     const username = req.params.username;
     console.log(username);
     try {
@@ -27,8 +68,9 @@ router.get("/checkusername/:username", async (req, res) => {
         console.log(error)
         res.status(302).json({ message: error });
     }
-})
-router.post("/login", async (req, res) => {
+}
+
+const login =async (req, res) => {
     const obj = req.body;
     try {
         psql.query("select username,email,user_id,password,access_token,display_picture from user_dimension where username=$1",
@@ -86,80 +128,9 @@ router.post("/login", async (req, res) => {
     } catch (error) {
         res.status(401)
     }
-})
+}
 
-router.post("/logout", async (req, res) => {
-    res.clearCookie('cookie', { path: '/' });
-    res.status(200).json({ message: 'Logged out successfully' });
-})
-router.post("/logain", async (req, res) => {
-    let obj = req.body;
-    try {
-        if (obj.username != null) {
-            // console.log(obj.username);
-            psql.query("select user_id,password from user_dimension where username=$1",
-                [obj.username],
-                (err, result) => {
-                    if (err) {
-                        console.log(err)
-                        throw (err.message);
-                    }
-                    if (result.rowCount > 0) {
-                        const hash = result.rows[0].password;
-                        const user_id = result.rows[0].user_id;
-                        console.log(hash, obj.password);
-                        bcrypt.compare(obj.password, hash, (error, pwd_result) => {
-                            console.log(pwd_result, obj.password, hash);
-                            if (error) {
-                                throw (error);
-                            }
-                            if (pwd_result == true) {
-                                psql.query(
-                                    "select user_id,username,email,display_picture from user_dimension where user_id=$1",
-                                    [user_id],
-                                    (err, response) => {
-                                        if (err) { throw (err); }
-                                        if (response) {
-                                            const token = jwt.sign(
-                                                {
-                                                    user_id: user_id,
-                                                    username: response.rows[0].username,
-                                                    email: response.rows[0].email
-                                                },
-                                                process.env.JWT_SECRET,
-                                                {
-                                                    expiresIn: "100d"
-                                                }
-                                            );
-
-                                            res.cookie("cookie", token, {
-                                                httpOnly: true,
-                                                secure: process.env.JWT_SECRET,
-                                                maxAge: 864000000
-                                            }).status(200).json({
-                                                message: "Access granted"
-                                            })
-                                        }
-                                    }
-                                )
-                            }
-                            else {
-                                res.status(400).json({ message: "Incorrect username or password" })
-                            }
-                        })
-                    }
-                    else {
-                        res.status(400).json({ message: "Incorrect username or password" })
-                    }
-                })
-        }
-    } catch (error) {
-        console.log(error);
-        res.status(400).json({ message: error })
-    }
-})
-
-router.post("/register", async (req, res) => {
+const register =  async (req, res) => {
     const obj = req.body;
     console.log("register");
     console.log(process.env.JWT_SECRET);
@@ -194,5 +165,10 @@ router.post("/register", async (req, res) => {
 
         // res.status(400).json({ message: error })
     }
-})
-module.exports = router;
+}
+
+const logout = async (req, res) => {
+    res.clearCookie('cookie', { path: '/' });
+    res.status(200).json({ message: 'Logged out successfully' });
+}
+module.exports = { verify_token, createJWT, retrieveToken, parseCookies, getProfile,checkUsername,login,register ,logout}
