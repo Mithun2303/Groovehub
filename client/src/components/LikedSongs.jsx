@@ -13,7 +13,7 @@ export const LikedSongs = ({ setCurrentSong,
     const [songs, setSongs] = useState([]);
     useEffect(() => {
         if (likedSongs != null) {
-            axios.post("http://127.0.0.1:8000/api/user/song", { likedSongs: likedSongs })
+            axios.post("http://54.163.212.62:8121/api/user/song", { likedSongs: likedSongs })
                 .then((res) => {
                     setSongs(res.data);
                     console.log(res.data);
@@ -27,7 +27,7 @@ export const LikedSongs = ({ setCurrentSong,
         if (likedSongs.includes(element._id)) {
             if (isLoggedIn) {
                 setLikedSongs((el) => { return el.filter(val => val != element._id) });
-                await axios.post("http://127.0.0.1:8000/api/user/unlike", { song: element }, { withCredentials: true })
+                await axios.post("http://54.163.212.62:8121/api/user/unlike", { song: element }, { withCredentials: true })
                     .then((res) => {
                         console.log(res.data);
                     })
@@ -38,7 +38,7 @@ export const LikedSongs = ({ setCurrentSong,
             if (isLoggedIn) {
                 setLikedSongs((el) => [...el, element._id]);
                 console.log("bello");
-                await axios.post("http://127.0.0.1:8000/api/user/like", { song: element }, { withCredentials: true })
+                await axios.post("http://54.163.212.62:8121/api/user/like", { song: element }, { withCredentials: true })
                     .then((res) => {
                         console.log(res);
                     })

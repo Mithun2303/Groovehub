@@ -25,11 +25,11 @@ export const Home = ({ setShowMainPage,
     const [trendyAlbum, setTrendyAlbum] = useState([]);
     useEffect(() => {
 
-        axios.get("http://127.0.0.1:8000/api/popular_artist").then((res) => {
+        axios.get("http://54.163.212.62:8121/api/popular_artist").then((res) => {
             // console.log(res.data);
             setPopularArtists(res.data);
         });
-        axios.get("http://127.0.0.1:8000/api/trendy_album").then((res) => {
+        axios.get("http://54.163.212.62:8121/api/trendy_album").then((res) => {
             // console.log(res.data);
             setTrendyAlbum(res.data);
         });

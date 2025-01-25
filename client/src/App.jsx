@@ -66,7 +66,7 @@ function App() {
   }
   const listen = (song) => {
     if (isLoggedIn) {
-      axios.post("http://127.0.0.1:8000/api/user/listen", { song: song }, { withCredentials: true })
+      axios.post("http://54.163.212.62:8121/api/user/listen", { song: song }, { withCredentials: true })
         .then((res) => {
           console.log(res);
         })

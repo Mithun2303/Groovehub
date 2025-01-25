@@ -7,7 +7,7 @@ import Cookies from 'js-cookie';
 export const Sample = () => {
     const [popularArtists, SetPopularArtists] = useState([]);
     // useEffect(() => {
-    //     axios.get("http://127.0.0.1:8000/api/popular_artist").then((res) => {
+    //     axios.get("http://54.163.212.62:8121/api/popular_artist").then((res) => {
     //         console.log(res.data);
     //         SetPopularArtists(res.data);
     //     });

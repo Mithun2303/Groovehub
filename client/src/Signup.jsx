@@ -12,7 +12,7 @@ import LoadPicture from "./LoadPicture";
 // import Signup2 from "./signup-2";
 function Signup({ onNext, setIsLogin, handleLogin }) {
 
-    const host = "http://127.0.0.1:8000";
+    const host = "http://54.163.212.62:8121";
     const navigate = useNavigate();
     const [reqObj, setReqObj] = useState({
         username: "",

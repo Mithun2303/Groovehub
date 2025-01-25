@@ -14,7 +14,7 @@ import { ref, uploadBytes, getDownloadURL } from "@firebase/storage";
 // import Signup2 from "./signup-2";
 function LoadPicture({ obj,setObj,register }) {
   const username= obj.username;
-  const host = "http://127.0.0.1:8000";
+  const host = "http://54.163.212.62:8121";
   const fileInputRef = useRef(null);
   const [file, setfile] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);

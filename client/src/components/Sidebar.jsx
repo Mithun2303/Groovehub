@@ -4,14 +4,14 @@ export const Sidebar = ({ activeComponent, setActiveComponent, showHome, isLogge
     const navigate = useNavigate();
     const handleClick = (e) => {
         e.preventDefault();
-        axios.post("http://127.0.0.1:8000/api/auth/logout", {}, { withCredentials: true })
+        axios.post("http://54.163.212.62:8121/api/auth/logout", {}, { withCredentials: true })
             .then((res) => {
                 console.log(res.data);
                 handleLogout();
             })
     }
     const createSpace = () => {
-        axios.post("http://127.0.0.1:8000/api/user/space", {}, { withCredentials: true })
+        axios.post("http://54.163.212.62:8121/api/user/space", {}, { withCredentials: true })
             .then((res) => {
                 console.log(res.data);
                 navigate(`/space/${res.data.space_id}`);

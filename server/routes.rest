@@ -1,24 +1,24 @@
 ###
 
-GET http://localhost:8000/api/popular_artist
+GET http://54.163.212.62:8121/api/popular_artist
 
 ###
 
-GET http://localhost:8000/api/artist/Taylor%20Swift
+GET http://54.163.212.62:8121/api/artist/Taylor%20Swift
 
 ###
 
-GET http://localhost:8000/api/album/Mahaan
+GET http://54.163.212.62:8121/api/album/Mahaan
 
 ###
 
-GET http://localhost:8000/api/auth/checkusername/mithun
+GET http://54.163.212.62:8121/api/auth/checkusername/mithun
 
 ###
-GET http://127.0.0.1:8000/api/user/likedsongs
+GET http://54.163.212.62:8121/api/user/likedsongs
 
 ###
-GET http://127.0.0.1:8000/api/user/song
+GET http://54.163.212.62:8121/api/user/song
 Content-Type: application/json
 
 {
@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8000/api/auth/login/
+POST http://54.163.212.62:8121/api/auth/login/
 Content-Type: application/json
 
 {
@@ -43,7 +43,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8000/api/auth/register/
+POST http://54.163.212.62:8121/api/auth/register/
 Content-Type: application/json
 
 {
@@ -53,7 +53,7 @@ Content-Type: application/json
 }
 
 ### 
-POST http://127.0.0.1:8000/api/user/like
+POST http://54.163.212.62:8121/api/user/like
 Content-Type: application/json
 
 {

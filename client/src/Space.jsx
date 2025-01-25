@@ -6,7 +6,7 @@ import io from "socket.io-client";
 import axios from 'axios';
 
 export const Space = () => {
-  const socket = io.connect("http://127.0.0.1:8000");
+  const socket = io.connect("http://54.163.212.62:8121");
   const { space_id } = useParams()
   const [message, setMessage] = useState([]);
   const [input, setInput] = useState("");
@@ -25,7 +25,7 @@ export const Space = () => {
 
   useEffect(() => {
     console.log("INSIDE EFFECT")
-    axios.get(`http://127.0.0.1:8000/api/user/profile/${username}`).then((res) => {
+    axios.get(`http://54.163.212.62:8121/api/user/profile/${username}`).then((res) => {
       console.log(res.data);
       setProfile(res.data.profile);
     })

@@ -11,7 +11,7 @@ export const ShowJoinSpace = ({ setShowJoinSpace }) => {
         e.preventDefault();
         console.log(spaceId)
         if (spaceId.length != 0 && spaceId.length == 6) {
-            axios.get(`http://127.0.0.1:8000/api/user/space/${spaceId}`, { withCredentials: true }).then((res) => {
+            axios.get(`http://54.163.212.62:8121/api/user/space/${spaceId}`, { withCredentials: true }).then((res) => {
                 console.log(res);    
                 navigate(`/space/${spaceId}`)
         }).catch((error)=>{

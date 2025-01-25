@@ -43,7 +43,7 @@ export const Dashboard = ({ cookies,
     useEffect(() => {
         if (isLoggedIn==true) {
             console.log(isLoggedIn);
-            axios.get("http://127.0.0.1:8000/api/user/likedsongs", { withCredentials: true })
+            axios.get("http://54.163.212.62:8121/api/user/likedsongs", { withCredentials: true })
                 .then((res) => {
                     // console.log(res.data);
                     let ids = res.data.ids;
@@ -56,7 +56,7 @@ export const Dashboard = ({ cookies,
                 })
         };
         if (isLoggedIn)
-            axios.get("http://127.0.0.1:8000/api/user/recentlyplayed/4", { withCredentials: true })
+            axios.get("http://54.163.212.62:8121/api/user/recentlyplayed/4", { withCredentials: true })
                 .then((res) => {
                     console.log(res.data);
                     setRecentlyPlayed(res.data);
