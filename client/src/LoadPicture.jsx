@@ -8,7 +8,7 @@ import instagram from "./assets/instagram.svg";
 import gmail from "./assets/gmail.svg";
 import x from "./assets/x.svg";
 import { fb, storage } from "./firebase";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "@firebase/storage";
 
 
 // import Signup2 from "./signup-2";
