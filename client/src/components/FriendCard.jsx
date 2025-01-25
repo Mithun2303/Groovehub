@@ -2,7 +2,7 @@ export const FriendCard = () => {
     return (
         <main className="w-[100%] flex gap-20">
             <div className="flex text-white items-center gap-3">
-                <img className="rounded-[50px] h-[50px] w-[50px]" src="https://s3-alpha-sig.figma.com/img/7181/5ed7/ac1b580e69d19a5e5e5f445a1c682346?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Nm6HjyDHXL4gWcMC47eO5vqiwxkTP29EkqgmlSGUOLEF~W4Ft8-~DELajCUDoqcr9fl8j-VOSQw3laAMKVyY63UIqAhQb-PqEgPHH2h4aCuEtkADIDRFEiZHqnPG52UTI~xWRNC2LW~H-lB-6N7akjh5sL7DWluYC~iwMnBAKWY~BAhh2VmzRAHyLqKdkLvwHCYeWHCjI7eoLq7X9~EO6I0JalCqrhp4RWHXI4fY-u6HaLTcn5tEGc-yNR-PYgWpFr-nUqmALHYfZNOegjJu-6m8YpbVr59lR4DOiG-Pxyk5SqAufbNTn5EY5KbgLajf8j03Zl78PrRiE-e73cHqMg__" alt="" />
+                <img className="rounded-[50px] h-[50px] w-[50px]" src="https://img.icons8.com/bubbles/50/user.png" alt="" />
                 <div className="flex flex-col">
                     <span className="text-lg font-light truncate w-[100px]">
                         Nandanalzkjskasjfsa[df]

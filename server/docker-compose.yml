@@ -1,0 +1,30 @@
+services:
+  groovehub_api:
+    build: 
+      context: .
+      dockerfile: Dockerfile 
+    ports:
+      - "8121:8000"
+    depends_on:
+      - db
+    environment:
+      - JWT_SECRET=bbd3de0fbaa427a4d3a26d06c5a9c027e720e174242de506f8ad225c432312ba4774013b2b6b7188e4ab2983a098489f4773327048a0717b0a54742da727463b
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+    - "5434:5432"
+    environment:
+      - POSTGRES_USER=gh
+      - POSTGRES_PASSWORD=gh
+      - POSTGRES_DB=gh
+      - PGUSER=gh
+    volumes:
+      - groovehub_data:/var/lib/postgresql/data
+    healthcheck:
+          test: ["CMD-SHELL", "pg_isready"]
+          interval: 1s
+          timeout: 5s
+          retries: 10
+volumes:
+  groovehub_data:
