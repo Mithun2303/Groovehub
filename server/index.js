@@ -13,7 +13,7 @@ const Auth = require("./routes/Auth");
 const User = require("./routes/User");
 const SongModel = require("./models/Songs");
 
-mongoose.connect("mongodb://localhost:27017/Groovehub")
+mongoose.connect("mongodb+srv://22pc19:GrooveHub@groovehub.x0t0v.mongodb.net/?retryWrites=true&w=majority&appName=GrooveHub")
 
 app.use(middleware)
 app.use(cors({
